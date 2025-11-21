@@ -8,11 +8,9 @@ Take the below hex string, decode it into bytes and then encode it into Base64.
 72bca9b68fc16ac7beeb8f849dca1d8a783e8acf9679bf9269f7bf
 '''
 
-import base64
+from tools.encoding_tools import EncodingTools as ec
 
 input_str = "72bca9b68fc16ac7beeb8f849dca1d8a783e8acf9679bf9269f7bf"
 
-bs64 = bytes.fromhex(input_str)
-
-print(base64.b64encode(bs64))
+print(ec.decodeBase64String(input_str))
 
